@@ -21,7 +21,7 @@
 #include "server.h"
 #include "vdevice.h"
 
-#define VERSION "tabletmoded 1.3.0"
+#define VERSION "tabletmoded 1.4.0"
 
 #define KEYBOARDD_SOCK "/var/run/keyboardd.sock"
 #define trackpadD_SOCK "/var/run/trackpadd.sock"
