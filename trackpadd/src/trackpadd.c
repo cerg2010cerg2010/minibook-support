@@ -16,10 +16,10 @@
 #include "server.h"
 #include "vdevice.h"
 
-#define MINIBOOK_INPUT_DEVICE "/dev/input/by-id/usb-0603_0003-event-trackpad"
+#define MINIBOOK_INPUT_DEVICE "/dev/input/by-id/usb-0603_0003-event-mouse"
 #define MINIBOOKX_INPUT_DEVICE                                                 \
     "/dev/input/by-path/"                                                      \
-    "pci-0000:00:15.3-platform-i2c_designware.3-event-trackpad"
+    "pci-0000:00:15.3-platform-i2c_designware.3-event-mouse"
 
 #define VERSION "trackpadd 1.3.0"
 
