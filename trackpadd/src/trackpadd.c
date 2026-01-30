@@ -17,6 +17,9 @@
 #include "vdevice.h"
 
 #define MINIBOOK_INPUT_DEVICE "/dev/input/by-id/usb-0603_0003-event-mouse"
+#define MINIBOOK_INPUT_DEVICE2                                                 \
+    "/dev/input/by-path/"                                                      \
+    "pci-0000:00:14.0-usbv2-0:6:1.0-event-mouse"
 #define MINIBOOKX_INPUT_DEVICE                                                 \
     "/dev/input/by-path/"                                                      \
     "pci-0000:00:15.3-platform-i2c_designware.3-event-mouse"
@@ -176,6 +179,9 @@ int main(int argc, char *argv[]) {
         is_enabled_calibration = 0;
     } else {
         input = open(MINIBOOK_INPUT_DEVICE, O_RDWR);
+        if (input == -1) {
+            input = open(MINIBOOK_INPUT_DEVICE2, O_RDWR);
+        }
     }
     if (input == -1) {
         perror("Cannot open the input device");
